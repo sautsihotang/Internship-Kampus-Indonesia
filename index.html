@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Kampus Indonesia</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link href="gambar/kampusIndonesia.png" rel="shortcut icon">
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+   
+
+    <style>
+        
+       
+
+    .container{
+        margin-top: 100px;
+        color: #062d62;
+    }
+    .content-1 .kampus-1{
+        display: inline-block;
+        padding: 10px 50px 10px 50px;
+        background-color: #ffffff;
+        border: 5px solid #ffffff;
+        
+    
+    
+        
+    }
+    .content-1 .kampus-1 .caption, .content-1 .kampus-2 .caption{
+        
+        width: 250px;
+        text-align: center;
+        
+    }
+    .content-1 .kampus-2{
+        display: inline-block;
+        padding: 10px 50px 10px 50px;
+        background-color: #ffffff;
+        
+        
+    }
+
+    .content-1 .kampus-1 img, .content-1 .kampus-2 img{
+        width: 60px;
+        height: 80px;
+        
+
+        }
+
+
+
+
+        .galery{
+            width: 90%;
+            margin: 10px auto;
+           list-style: none;
+           display: grid;
+           grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+           grid-gap:15px;
+        }
+        .galery li img{
+            display: block;
+            width: 100%;
+            border-radius: 10px;
+        }
+
+
+        /* =============================== */
+
+ .hi-slide { 
+      position: relative; 
+      width: 754px; 
+      height: 292px; 
+      margin: 5px 
+      auto 0; }
+            
+    .hi-slide .hi-next,
+    .hi-slide .hi-prev 
+              { position: absolute;
+                top: 30%; 
+                width: 40px;
+                height: 40px; 
+                border-radius: 50px; 
+                   
+                  
+                line-height: 40px;
+                text-align: center; 
+                cursor: pointer;
+                background-color:#000080; 
+                color: #ffffff;               
+                transition: all 0.6s;
+                font-size: 20px; 
+                  font-weight: bold;
+              }
+            .hi-slide .hi-next:hover, 
+            .hi-slide .hi-prev:hover 
+              {
+              opacity: 1; 
+              background-color: blue;  
+              }
+              
+            .hi-slide .hi-prev { left: -60px; }
+              
+             .hi-slide .hi-prev::before { content: '<'; }
+           .hi-slide .hi-next { right: -60px; }
+              .hi-slide .hi-next::before { content: '>'; }
+       .hi-slide > ul
+                      { 
+                          list-style: none; 
+                          position: relative;
+                          width: 754px; 
+                          height: 292px; 
+                          margin: 0;
+                          padding: 0;
+              }
+              
+              
+             .hi-slide > ul > li {
+              overflow: hidden; 
+              position: absolute; 
+              z-index: 0; 
+              left: 377px;
+              top: 146px; 
+              width: 0; 
+              height: 0; 
+              margin: 0; 
+              padding: 0;
+              border: 3px solid #fff;              
+              background-color: #fff; 
+              cursor: pointer; }
+              
+               .hi-slide > ul > li > img {
+               width: 100%; 
+               height: 60%; 
+               background-position: center;
+            }
+            
+            #navbarSupportedContent>ul>li>a{
+                color: #062d62;
+            }
+
+           
+
+            
+
+          /* ======================== */
+ 
+    </style>
+
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" >
+  <a class="navbar-brand" href="index.html">
+        <img src="gambar/kampusIndonesia.png" alt="logo" style="width:200px;">
+    </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto font-weight-bold" >
+      <li class="nav-item active">
+        <a class="nav-link" href="#" >Beranda <span class="sr-only">(current)</span></a>
+      </li>
+      
+      <li class="nav-item dropdown active">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Fitur
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Cari Kampus/Prodi</a>
+          <a class="dropdown-item" href="#">Cari Seminar/Workshop</a>
+          <a class="dropdown-item" href="#">Cari Beasiswa</a>
+          <a class="dropdown-item" href="#">Cari Lomba</a>
+          <a class="dropdown-item" href="#">Cari Lowongan</a>
+          <a class="dropdown-item" href="#">UTBK</a>
+          
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="#" style="color: #062d62;">Hubungi Kami</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Blog</a>
+      </li>
+      
+    </ul>
+    <div class="form-inline my-2 my-lg-0">
+      
+      <ul class="navbar-nav mr-auto ">
+        <li class="nav-item active">
+            <a href="#" class="btn font-weight-bold  active mr-sm-2" data-target="#exampleModal" data-toggle="modal" aria-pressed="true">Masuk</a>
+            
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Selamat Datang Kembali</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            </div>
+                            <div class="form-group">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                            </div>
+                            <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </li>
+            <li class="nav-item active">
+        <a href="#" class="btn btn-primary font-weight-bold active" role="button" aria-pressed="true">Daftar</a>
+        </li>
+      </ul>
+      
+    </div>
+  </div>
+</nav>
+<div class="jumbotron" style="background-image:url(gambar/back.png);
+background-size: contain;
+background-repeat: no-repeat;
+background-position: top right;
+color: #062d62;
+
+">
+    <div class="row" style="margin-top: 200px;">
+        <div class="col-sm-4" >
+            <h1>Bingung Cari Informasi Seputar Kuliah ?</h1>
+            <p>Dapatkan informasi seputar dunia perkuliahan secara terupdate dari kami melalui aplikasi Kampus Indonesia</p>
+        </div>
+        <div class="col-sm-6">
+
+        </div>
+        <div class="col-sm-2"></div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-6">
+            
+            <input class="form-control mr-sm-2" type="search" placeholder="Infomasi Seputar Perkuliahan / Cari Kampus" aria-label="Search">
+        </div>
+        <div class="col-sm-3"></div>
+    </div>
+</div>
+
+
+<div class="item content-1 text-center" style="color: #062d62;">
+    <div class="kampus-1">
+        <img src="gambar/campus.png" alt="Kampus">
+        <div class="caption">
+            <h2>1024</h2>
+            <p>Jumlah Kampus yang terdata saat ini</p>
+        </div>
+    </div>
+    <div class="kampus-2">
+        <img src="gambar/campus.png" alt="Kampus">
+        <div class="caption">
+            <h2>113</h2>
+            <p>Jumlah Kampus yang sudah terdaftar di Pintara</p>
+        </div>
+    </div>
+</div>
+
+
+<div class="container" style="color: #062d62;">
+    <div class="row">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-9 d-flex justify-content-sm-around">
+            <h3 >Rekomedasi Kampus Terbaik</h3>
+            <a href="" >Lihat kampus lain ></a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3 text-white bg-primary " >
+            <div class="thumbnail">
+                <h2>Website untuk Mencari Informasi Seputar Kuliah</h2>
+                <div class="caption">
+                    <p>Dapatkan informasi seputar dunia perkuliahan secara terupdate dari kami melalui aplikasi kampus Indonesia</p>
+                    <p ><a href="artikel.html" class="btn btn-light btn-block" role="button">Selengkapnya</a></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-3">
+            <div class="thumbnail">
+                <a href="artikel.html"><img src="gambar/brawijaya.jpg" width="100%" alt="Cinque Terre"></a>
+                <div class="caption d-flex justify-content-between">
+                    <img src="gambar/logo-brawijaya.png" width="50px" alt="">
+                    <h5 class="btn btn-primary " >Akreditas:A</h5>
+                </div>
+                <p class="font-weight-bold"><i class="bi bi-award"></i> Negeri</p>
+                    <p><a href="#" class="btn btn-primary btn-block" role="button">Selengkapnya</a></p>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="thumbnail">
+                <a href="artikel.html"><img src="gambar/gadjahmada.jpg" width="100%" alt="Cinque Terre"></a>
+                <div class="caption d-flex justify-content-between">
+                    <img src="gambar/logo-ugm.png" width="50px" alt="">
+                    <h5 class="btn btn-primary ">Akreditas:A</h5>
+                </div>
+                <p class="font-weight-bold"><i class="bi bi-award"></i> Negeri</p>
+                    <p><a href="#" class="btn btn-primary btn-block" role="button">Selengkapnya</a></p>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="thumbnail">
+                <a href="artikel.html"><img src="gambar/itb.jpg" width="100%" alt="Cinque Terre"></a>
+                <div class="caption d-flex justify-content-between">
+                    <img src="gambar/logo-itb.png" width="50px" alt="">
+                    <h5 class="btn btn-primary ">Akreditas:A</h5>
+                </div>
+                <p class="font-weight-bold"><i class="bi bi-award"></i> Negeri</p>
+                    <p><a href="#" class="btn btn-primary btn-block" role="button">Selengkapnya</a></p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="container text-center">
+    <h1>My Picture</h1>
+    <ul class="galery">
+        <li class="d-flex justify-content-center align-content-center flex-wrap">
+            <img src="gambar/jakarta.jpg" alt="">
+            <h3>Jakarta</h3>
+        </li>
+        <li class="d-flex justify-content-center align-content-center flex-wrap">
+            <img src="gambar/surabaya.jpg" alt="">
+            <h3>Surabaya</h3>
+        </li>
+        <li class="d-flex justify-content-center align-content-center flex-wrap">
+            <img src="gambar/yokyakarta.jpg" alt="">
+            <h3>Yogyakarta</h3>
+        </li>
+        <li class="d-flex justify-content-center align-content-center flex-wrap">
+            <img src="gambar/bandung.jpg" alt="">
+            <h3>Bandung</h3>
+        </li>
+        <li class="d-flex justify-content-center align-content-center flex-wrap">
+            <img src="gambar/medan.jpg" alt="">
+            <h3>Medan</h3>
+        </li>
+        <li class="d-flex justify-content-center align-content-center flex-wrap">
+            <img src="gambar/semarang.jpg" alt="">
+            <h3>Semarang</h3>
+        </li>
+        <li class="d-flex justify-content-center align-content-center flex-wrap">
+            <img src="gambar/malang.jpg" alt="">
+            <h3>Malang</h3>
+        </li>
+        <li class="d-flex justify-content-center align-content-center flex-wrap">
+            <img src="gambar/bali.jpg" alt="">
+            <h3>Bali</h3>
+        </li>
+        
+        
+    </ul>
+
+</div>
+
+<div class="container text-center">
+    <h1>Fitur Yang Tersedia di Kampus Indonesia</h1>
+    <div class="row">
+        <div class="col-sm-4 bg-light">
+            <div class="thumbnail">
+                <a href="artikel.html"><img src="gambar/kampus.JPG"  alt="Cinque Terre" style="margin-top: 20px;"></a>
+                <div class="caption ">
+                    
+                    <h5>Kampus</h5>
+                </div>
+                
+            </div>
+        </div>
+        <div class="col-sm-4 bg-light">
+            <div class="thumbnail">
+                <a href="artikel.html"><img src="gambar/beasiswa.JPG"  alt="Cinque Terre" style="margin-top: 20px;"></a>
+                <div class="caption ">
+                    
+                    <h5>Beasiswa</h5>
+                </div>
+                
+            </div>
+        </div>
+        <div class="col-sm-4 bg-light">
+            <div class="thumbnail">
+                <a href="artikel.html"><img src="gambar/seminar.JPG"  alt="Cinque Terre" style="margin-top: 20px;"></a>
+                <div class="caption ">
+                    
+                    <h5>Seminar/Workshop</h5>
+                </div>
+                
+            </div>
+        </div>
+        <div class="col-sm-4 bg-light">
+            <div class="thumbnail">
+                <a href="artikel.html"><img src="gambar/lomba.JPG"  alt="Cinque Terre" style="margin-top: 20px;"></a>
+                <div class="caption ">
+                    
+                    <h5>Lomba</h5>
+                </div>
+                
+            </div>
+        </div>
+        <div class="col-sm-4 bg-light">
+            <div class="thumbnail">
+                <a href="artikel.html"><img src="gambar/lowongan.JPG"  alt="Cinque Terre" style="margin-top: 20px;"></a>
+                <div class="caption ">
+                    
+                    <h5>Lowongan</h5>
+                </div>
+                
+            </div>
+        </div>
+        <div class="col-sm-4 bg-light">
+            <div class="thumbnail">
+                <a href="artikel.html"><img src="gambar/utbk.JPG"  alt="Cinque Terre" style="margin-top: 20px;"></a>
+                <div class="caption ">
+                    
+                    <h5>UTBK</h5>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-5">
+            <div class="thumbnail">
+                <a href="artikel.html"><img src="gambar/Capture-left.JPG" width="100%" alt="Cinque Terre"></a>
+               
+            </div>
+        </div>
+
+        <div class="col-sm-7 text-center " style="margin-top: 5%;">
+           
+                <h2>Apakah Kamu Sedang Mencari Pekerjaan ?</h2>
+                <p>Temukan Pekerjaan Terbaik Kamu Disini.</p>
+                <p><a href="#" class="btn btn-primary" role="button">  Cari Lowongan  </a></p>
+
+          
+        </div>
+    </div>
+</div>
+
+
+<div class="container ">
+    <h1 class="text-center">Informasi Seminar & Beasiswa</h1>
+    <div class="row">
+        <div class="col-sm-3 d-flex justify-content-sm-around">
+            <a href=""><h5 class="text-decoration-underline">Seminar</h5></a>
+            <a href=""><h5>Beasiswa</h5></a>
+        </div>
+        <div class="col-sm-9 d-flex justify-content-sm-end">
+            
+            <a href="" class="text-decoration-none" >Lihat Semua ></a>
+        </div>
+        <div class="col-sm-12"  style="height: 5px; background-color: #a8c0e4;">
+           
+        </div>
+    </div>
+    <div class="row">
+        <div class="slide hi-slide">
+            <div class="hi-prev "></div>
+              <div class="hi-next "></div>
+              <ul>
+                  
+                  <li>
+                      <img src="gambar/fundamental-ui-ux.jpg" alt="">
+                     
+                      <a href="" class="akreditas" ><button type="button" class="btn btn-primary btn-sm">Akreditas:A</button></a>
+                        <p>Seminar</p>
+                        <p><i class="fa fa-calendar"></i> Sabtu, 3 Oktober 2020
+                        <i class="fa fa-map-marker"></i> Zoom Meet</p>
+                    </li>
+                  <li>
+                      <img src="gambar/intro-ui-ux.jpg" alt="">
+                     
+                      <a href="" class="akreditas" ><button type="button" class="btn btn-primary btn-sm">Akreditas:A</button></a>
+                        <p>Workshop</p>
+                        <p><i class="fa fa-calendar"></i> Sabtu, 06 Februari 2021
+                        <i class="fa fa-map-marker"></i> Zoom Meet</p>
+                    </li>
+                  <li>
+                      <img src="gambar/sharing-ui-ux.jpg" alt="">
+                     
+                      <a href="" class="akreditas" ><button type="button" class="btn btn-primary btn-sm">Akreditas:A</button></a>
+                        <p>Seminar</p>
+                        <p><i class="fa fa-calendar"></i> 07 November 2018
+                        <i class="fa fa-map-marker"></i> Jakarta</p>
+                    </li>
+                  <li>
+                      <img src="gambar/ui-ux.jpg" alt="">
+                     
+                      <a href="" class="akreditas" ><button type="button" class="btn btn-primary btn-sm">Akreditas:A</button></a>
+                        <p>Workshop</p>
+                        <p><i class="fa fa-calendar"></i> Sabtu, 15 Desember 2018
+                        <i class="fa fa-map-marker"></i> BanjarSari</p>
+                    </li>
+                  <li>
+                      <img src="gambar/webinar-ui-ux.png" alt="">
+                     
+                      <a href="" class="akreditas" ><button type="button" class="btn btn-primary btn-sm">Akreditas:A</button></a>
+                        <p>Seminar</p>
+                        <p><i class="fa fa-calendar"></i> Kamis, 13 Agustus 2020
+                        <i class="fa fa-map-marker"></i> Google Meet</p>
+                    </li>
+                  <li>
+                      <img src="gambar/business-uiux.jpg" alt="">
+                     
+                      <a href="" class="akreditas" ><button type="button" class="btn btn-primary btn-sm">Akreditas:A</button></a>
+                        <p>Seminar</p>
+                        <p><i class="fa fa-calendar"></i> Jumat, 7 Februari 2020
+                            <i class="fa fa-map-marker"></i> jln. Trunojoyo no 11 Bandung</p>
+                    </li>
+                  
+              </ul>
+          </div>
+
+    </div>
+
+</div>
+
+
+<div class="container ">
+    <h1>Artikel Terbaru Kampus</h1>
+    <p>Jangan sampai terlewat informasi terbaru kampus favoritmu</p>
+    <div class="bd-example">
+        <div id="carouselExampleCaptions" class="carousel slide text-center" data-ride="carousel">
+         
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="gambar/c3.jpg" class="rounded" alt="...">
+              
+              <div class="carousel-caption " style="text-align: center;">
+                <button type="button" class="btn btn-info rounded-pill ">Artikel</button>
+                <h5>10 PTN Paling Diminati Di SBMPTN 2020</h5>
+                <p>14 September 2020</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="gambar/c2.jpeg" class="rounded" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                <button type="button" class="btn btn-info rounded-pill">Artikel</button>
+                <h5>Penyebab Mahasiswa Stress Kuliah Online</h5>
+                <p>13 September 2020</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="gambar/c1.jpeg" class="rounded" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                <button type="button" class="btn btn-info rounded-pill ">Artikel</button>
+                <h5>Tips Agar Bisa Fokus Ke Pendidikan</h5>
+                <p>12 September 2020</p>
+              </div>
+            </div>
+          </div>
+          <a class="carousel-control-prev " href="#carouselExampleCaptions" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon bg-dark" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next " href="#carouselExampleCaptions" role="button" data-slide="next">
+            <span class="carousel-control-next-icon bg-dark" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="container text-center">
+    <h1>Bekerja Sama Dengan</h1>
+    <div class="row">
+        <div class="col-sm-2 bg-light">
+            <div class="thumbnail">
+                <a href=""><img src="gambar/logo-itb.png"  alt="Cinque Terre" style="margin-top: 20px; width: 150px;"></a>
+            </div>
+        </div>
+        <div class="col-sm-2 bg-light">
+            <div class="thumbnail">
+                <a href=""><img src="gambar/logo-ugm.png"  alt="Cinque Terre" style="margin-top: 20px; width: 150px;"></a>
+            </div>
+        </div>
+        <div class="col-sm-2 bg-light">
+            <div class="thumbnail">
+                <a href=""><img src="gambar/logo-brawijaya.png"  alt="Cinque Terre" style="margin-top: 20px; width: 150px;"></a>
+            </div>
+        </div>
+        <div class="col-sm-2 bg-light">
+            <div class="thumbnail">
+                <a href=""><img src="gambar/logo-del.png"  alt="Cinque Terre" style="margin-top: 20px; width: 150px;"></a>
+            </div>
+        </div>
+        <div class="col-sm-2 bg-light">
+            <div class="thumbnail">
+                <a href=""><img src="gambar/logo-ipb.png"  alt="Cinque Terre" style="margin-top: 20px; width: 150px;"></a>
+            </div>
+        </div>
+        <div class="col-sm-2 bg-light">
+            <div class="thumbnail">
+                <a href=""><img src="gambar/logo-ui.png"  alt="Cinque Terre" style="margin-top: 20px; width: 150px;"></a>
+            </div>
+        </div>
+        
+       
+    </div>
+</div>
+
+<div class="jumbotron text-center " style="margin-bottom:0; margin-top: 30px; background-color: #14375e; color: #ffffff;">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3">
+                <h3 class="text-light">Kampus Indonesia</h3>
+                <ul class="list-unstyled text-light">
+                    <li><p>Kami merupakan Perusahaan dibidang informasi seputar dunia perkuliahan yang bisa memberikan informasi secara terupdate dan dapat dipercayai sepenuhnya</p></li>
+                    <ul class="list-unstyled ">
+                        <li>PT.Inpirasi Mandiri Nusantara</li>
+                        <li>Kecamatan Lokawaru</li>
+                        <li>Kota Malang, Jawa Timur</li>
+                        <li>Telepon</li>
+                        <li>021 3452 2885</li>
+                        <li>Email</li>
+                        <li>info@kampusindonesia.id</li>
+                    </ul>
+                </ul>
+            </div>
+            <div class="col-sm-3" >
+                <h4 class="text-light">Perusahaan</h4>
+                <ul class="list-unstyled text-light ">
+                    <li><a href="" class="text-light"><p> Tentang Kami</p></a></li>
+                    <li><a href="" class="text-light">Hubungi Kami</a></li>
+                    <li><a href="" class="text-light">Karir</a></li>
+                    <li><a href="" class="text-light">Feedback</a></li>
+                    <li><a href="" class="text-light">Partner</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-3">
+                <h4 class="text-light">Fitur</h4>
+                <ul class="list-unstyled">
+                    <li><a href="" class="text-light">Cari Kampus/Prodi</a></li>
+                    <li><a href="" class="text-light">Cari seminar/workshop</a></li>
+                    <li><a href="" class="text-light">Cari Beasiswa</a></li>
+                    <li><a href="" class="text-light">Cari Lomba</a></li>
+                    <li><a href="" class="text-light">Cari Lowongan</a></li>
+                    <li><a href="" class="text-light">UTBK</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-3">
+                <h4 class="text-light">Lainnya</h4>
+                <ul class="list-unstyled">
+                    <li><a href="" class="text-light">Bantuan </a></li>
+                    <li><a href="" class="text-light">Blog</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <p>@2020-Kampus Indonesia</p>
+</div>
+    
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="js/jquery.hislide.js" ></script>
+    <script>
+        $('.slide').hiSlide();
+    </script>
+</body>
+</html>
